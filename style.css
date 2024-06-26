@@ -40,7 +40,7 @@ main {
 }
 
 .item img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover; /* saves proportions and better pic quality */
 }
@@ -90,4 +90,24 @@ main {
 .list .item:has(+ * + * + *:hover) {
   filter: brightness(0.2);
   transform: translateZ(30px) rotateY(-10deg);
+}
+
+@media screen and (max-width: 1100px) {
+  .item img {
+    width: 60%;
+    height: 60%;
+  }
+  .list .item {
+    margin-right: -30px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .item img {
+    width: 40%;
+    height: 40%;
+  }
+  .list .item {
+    margin-right: -50px;
+  }
 }
